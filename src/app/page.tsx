@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Articles from "./components/Articles";
+import Cards from "./components/Cards";
 
 type Message = {
   role: "user" | "ai";
@@ -33,17 +35,12 @@ export default function Home() {
       });
 
       // TODO: Handle the response from the chat API to display the AI response in the UI
-
-
-
-
     } catch (error) {
       console.error("Error:", error);
     } finally {
       setIsLoading(false);
     }
   };
-
 
   // TODO: Modify the color schemes, fonts, and UI as needed for a good user experience
   // Refer to the Tailwind CSS docs here: https://tailwindcss.com/docs/customizing-colors, and here: https://tailwindcss.com/docs/hover-focus-and-other-states
@@ -123,6 +120,7 @@ export default function Home() {
             </button>
           </div>
         </div>
+        <Articles />
       </div>
     </div>
   );
