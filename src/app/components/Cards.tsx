@@ -49,7 +49,7 @@ function Cards() {
     <Swiper
       direction="vertical"
       slidesPerView={2}
-      spaceBetween={-300}
+      spaceBetween={-350}
       className="h-screen"
     >
       {articles.map((article, idx) => (
